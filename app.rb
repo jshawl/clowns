@@ -24,3 +24,8 @@ get '/new' do
   erb :new
 end
 
+post '/new' do
+  @clown = Clown.create params
+  redirect '/'
+end
+
