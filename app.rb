@@ -29,3 +29,12 @@ post '/new' do
   redirect '/'
 end
 
+get '/:clownid' do
+ @clown = Clown.find( 1 ) 
+ puts @clown.inspect
+ erb :show
+end
+
+after do
+    ActiveRecord::Base.clear_active_connections!
+end   
