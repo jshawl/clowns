@@ -30,8 +30,7 @@ post '/new' do
 end
 
 get '/:clownid' do
- @clown = Clown.find( 1 ) 
- puts @clown.inspect
+ @clown = Clown.find( params[:clownid] ) 
  erb :show
 end
 
