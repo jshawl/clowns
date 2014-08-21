@@ -1,6 +1,6 @@
 <a href='/new'>Add a new clown</a>
 <ul>
 <% @clowns.each do |clown| %>
-  <li><%= clown.name %> </li> 
+  <li><a href='/<%= clown.id %>'><%= clown.name %></a> </li> 
 <% end %>
 </ul>
